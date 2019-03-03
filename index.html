@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> JavaScript</title>
+
+  </head>
+  <body>
+    <p id="text">Какой нибудь текст</p>
+    <button onmouseover="changeColor('blue');">Синий</button>
+    <button onclick ="changeColor('red');">Красный</button>
+  <br>
+  <br>
+  <form name="myForm" action="" onsubmit="return validateForm()" method="post">
+    Имя: <input type="text" name="fname">
+    Телефон: <input type="text" name="ftel">
+    <input type="submit" name="" value="submit">
+  </form>
+
+
+  <script>
+       function validateForm (){
+         var element= document.forms["myForm"]["fname"].value;
+         var tel= document.forms["myForm"]["ftel"].value;
+         if (element==""){
+           alert("Имя должно быть заполненно");
+           return false;}
+           else if ( tel == ""){
+             alert("Укажите ваш телефон");
+             return false;
+
+         }
+
+       }
+
+        function changeColor (newColor){
+        var element = document.getElementById('text');
+        element.style.color = newColor;
+  }
+
+  // Обьекты
+   function Fruit(color,shape) {
+     this.color = color;
+     this.shape = shape;
+   }
+   var melon = new Fruit ('yellow','round');
+   var apple = new Fruit ('red','round');
+
+  // var apple = new Object();
+  // apple.color = 'green';
+  // apple.shape = 'round';
+
+   melon.describe = function() {
+     return 'a melon is ' + this.color;
+   }
+
+   console.log(melon.describe());
+
+    // Функции
+    var person = {
+      firstName: 'Brad',
+      age: 45,
+      children: ['LIsa','Perya'],
+      address: {
+        street: '555 some st',
+        city: 'Boston',
+        state: 'MA'
+      },
+      NameAge: function (){
+        return this.firstName + ", age is - " + this.age;
+      }
+
+    }
+    console.log(person.NameAge());
+
+    function summ (a,b) {
+      return a+b;
+    }
+    document.write( summ (23,44));
+
+
+    // Оператры условий
+//    var num_1 = 45;
+//    if (num_1>num_2){
+//   console.log(num_1 + ">"+ num_2);
+// } else if (num_1==num_2) {
+//      console.log (num_1 + "="+ num_2);
+//// }
+// else {
+  // var bool = false ;
+  // if ((bool || num_1==45) && num_2==45) {
+  //   console.log (bool + " is  false");
+//   }
+//    var res = 2;
+  //  switch (res) {
+  //     case 1:
+  //       alert("res = 1");
+    //    case 2:
+    //      alert("res = 2");
+    //    case 3:
+  //        alert("res = 3");
+    //    case 4:
+    //      alert("res = 4");
+  //      break;
+  //    default:
+  //      alert("res = unknown");
+
+    //}
+
+   // Циклы
+  // var i=20;
+//   do {
+//     i++;
+//     console.log(i);
+//   } while(i < 10);
+
+  // var i = 200;
+//   while (i >= 2){
+//     console.log(i);
+//    i /=2;
+
+//   }
+  var colors= new Array ("Red","Blue","green");
+  for(var i=0; i < colors.length; i++){
+     console.log(colors[i]);
+   }
+
+    //massiv
+  //  var colors= new Array ("Red","Blue","green");
+  //  colors.push ("yellow");
+  //  document.write(colors[0] + colors[3]);
+
+
+    var firstNum = 1;
+    var secondNum = 24;
+    firstNum--;
+  //  document.write(Math.abs(-222)+"<br>" );
+  //  document.writeln ("Результат:",firstNum +secondNum );
+
+    //Изучаем javascript
+    //alert("Hello World!");
+     var num =1.45;
+     var Num = "string";
+     var bool = true;
+    // console.log (bool);
+
+  //   var name = prompt ("Как вас завут?");
+  //   console.log ("Ваше имя "+ name);
+
+    </script>
+
+  </body>
+</html>
